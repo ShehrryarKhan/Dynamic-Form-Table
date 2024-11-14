@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form and Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="signup-section">
+        <h2>Signup Form</h2>
+        <form id="signupForm" onsubmit="displaySignupData(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="signupData" class="display-section"></div>
+    </section>
+
+    <hr>
+
+    
+    <section class="read-more-section">
+        <h2>Item Details</h2>
+        <p class="content">
+            This is an amazing bat high quality and great durability. 
+            <span class="more-text">It is perfect for everyday use and has received great feedback from our customers.</span>
+        </p>
+        <button onclick="toggleReadMore()">Read More</button>
+    </section>
+
+    <hr>
+
+   
+    <section class="student-section">
+        <h2>Student Details</h2>
+        <form id="studentForm" onsubmit="addStudent(event)">
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="text" id="studentAge" placeholder="Age" required>
+            <input type="text" id="studentGrade" placeholder="Grade" required>
+            <button type="submit">Add Student</button>
+        </form>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
